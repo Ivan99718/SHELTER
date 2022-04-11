@@ -100,6 +100,7 @@ h1{
     color: #FAFAFA;
     text-decoration: underline;
     color: #F1CDB3;
+    
 }
 
 ul li a{
@@ -112,6 +113,7 @@ ul li a{
     text-decoration: none;
     transition: 0.5s;
     margin-right: 35px;
+    outline: none;
 }
 
 ul li a:hover{
@@ -307,13 +309,17 @@ h4{
 }
 
 .arrow-left:hover{
-    color:#ffffff;
+    opacity: 0.4;
 }
 
 .arrow-right{
     position: relative;
     top: 200px;
     left: -1px;
+}
+
+.arrow-right img:hover{
+    opacity: 0.4;
 }
 
 .primary{
@@ -362,8 +368,8 @@ h4{
     margin-left: 127px;
 }
 
-.slider:hover{
-    background-color: #F1CDB3;
+.slider .pets img:hover{
+    transform: scale(1.2);
 }
 
 .pets img{
