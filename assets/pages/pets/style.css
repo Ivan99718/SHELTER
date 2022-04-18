@@ -378,3 +378,391 @@ h2{
 .footer-puppy{
   margin-top: 40px;
 }
+
+#menu__toggle {
+  opacity: 0;
+}
+
+.menu__btn {
+  display: flex; 
+  align-items: center;  
+  position: fixed;
+  top: 20px;
+  left: 237px;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #000000;
+}
+
+.menu__btn > span{
+    content: '';
+    top: 51px;
+}
+
+.menu__btn > span::before {
+  content: '';
+  top: 14px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 28px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 33%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #292929;;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #FAFAFA;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 160%;
+  text-decoration: none;
+}
+.menu__item:hover {
+  text-decoration: underline;
+}
+
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+.menu__box {
+  transition-duration: .25s;
+}
+.menu__item {
+  transition-duration: .25s;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper{
+      margin: 0 auto;
+  }
+
+  .bg{
+      background-size: 100%;
+  }
+
+  h1{
+      width: 100%;
+      margin-top: 40px;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 110%;
+      letter-spacing: 0.06em;
+      margin-right: 0px;
+  }
+  .nav{
+      margin-left: 81px;
+  }
+
+  .nav ul{
+      padding-left: 0px;
+      margin-top: 60px;
+      width: 114px;
+  }
+
+  .nav ul li:nth-child(1){
+      margin-left: 35px;
+      width: 114px;
+  }
+
+  .nav ul li:nth-child(2){
+      margin-left: 35px;
+      width: 114px;
+  }
+
+  .nav ul li a{
+      font-size: 15px;
+      line-height: 160%;
+  }
+
+  h2{
+    font-size: 35px;
+    line-height: 130%;
+    margin-left: 184px;
+    margin-top: 80px;
+    text-align: center;
+    width: 400px;
+    letter-spacing: 0.06em;
+  }
+
+  .card{
+    flex-wrap: wrap;
+  }
+
+  .card-pets{
+    margin-top: 30px;
+  }
+
+  .card-pets:nth-child(1){
+    margin-left: 94px;
+    margin-right: 40px;
+  }
+
+  .card-pets:nth-child(3){
+    margin-left: 94px;
+    margin-right: 40px;
+  }
+
+  .card-pets:nth-child(5){
+    margin-left: 94px;
+    margin-right: 40px;
+  }
+
+  .card-pets:nth-child(7){
+    display: none;
+  }
+
+  .card-pets:nth-child(8){
+    display: none;
+  }  
+
+  .pagination{
+    margin-left: 214px;
+  }
+
+  .footer-bg{
+      background-size: contain;
+  }
+
+  .footer-nav{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  }
+
+  .footer-email{
+      margin-left: 0px;
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin-left: 34px;
+  }
+
+  .footer-puppy{
+      margin-left: 234px;
+      grid-column: 1;
+      grid-row: 2/3;
+  }
+
+  .location{
+      display: block;
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin-left: 402px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  .bg{
+      background-size: 100% 100%;
+  }
+
+  h1{
+      font-size: 32px;
+      line-height: 110%;
+      margin-top: 30px;
+      margin-left: 10px;
+      width: 100%;
+  }
+
+  .logo p{
+      font-size: 13px;
+      line-height: 15px;
+      letter-spacing: 0.1em;
+      margin-left: 14px;
+      margin-top: 10px;
+      width: 100%;
+  }
+
+  .nav ul{
+      display: none;
+  }
+
+  h2{
+    font-size: 25px;
+    line-height: 130%;
+    margin-left: 10px;
+    width: 300px;
+    margin-top: 42px;
+    margin-bottom: 42px;
+  }
+
+  .card{
+    flex-wrap: wrap;
+    margin-left: 0px;
+  }
+
+  .card-pets:nth-child(1){
+    margin-left: 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .card-pets:nth-child(3){
+    margin-left: 0px;
+    margin-top: 30px;
+    margin-bottom: 42px;
+  }
+
+  .card-pets:nth-child(4){
+   display: none;
+  }
+
+  .card-pets:nth-child(5){
+    display: none;
+  }
+
+   .card-pets:nth-child(6){
+    display: none;
+  } 
+
+  .pagination{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-row: 1fr;
+    margin-left: 0px;
+    column-gap: 0px;
+    margin-bottom: 42px;
+    margin-top: 42px;
+  }
+
+  .pagination img{
+    width: 42px;
+    height: 42px;
+  }
+
+  .footer-nav{
+      display: grid;
+      grid-column: 1fr;
+      grid-row: 1fr 1fr 1fr;
+  }
+
+  .footer-email{
+      grid-column: 1;
+      grid-row: 1;
+      margin-left: 21px;
+  }
+
+  .footer-email img{
+      width: 40px;
+      height: 32px;
+  } 
+
+  .mail{
+      margin-bottom: 40px;
+  }
+
+  .footer-email a{
+      font-size: 20px;
+      line-height: 115%;
+  }
+  
+
+  .footer-email h3{
+      font-size: 25px;
+      line-height: 130%;
+      text-align: center;
+      margin-bottom: 40px;
+  }
+
+  .location{
+      grid-column: 1;
+      grid-row: 2;
+      margin-left: 25px;
+  }
+
+  .location h3{
+      font-size: 25px;
+      line-height: 130%;
+      text-align: center;
+      margin-bottom: 40px;
+  }
+  
+  .footer-puppy{
+      grid-column: 1;
+      grid-row: 3;
+  }
+
+  .location img{
+      width: 40px;
+      height: 32px;
+  } 
+
+  .location img:nth-child(2){
+      display: inline-block;
+      margin-left: -10px;
+  }
+
+  .location-boston{
+      margin-bottom: 40px;
+  }
+
+  .location a{
+      font-size: 20px;
+      line-height: 115%;
+      margin-left: -20px;
+  }
+
+  .footer-puppy{
+      margin-left: 0px;
+  }
+  
+  .footer-puppy img{
+      width: 260px;
+      height: 269px;
+      margin-left: 30px;
+  }
+
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    visibility: visible;
+  }
+}
